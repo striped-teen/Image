@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="180*"/>
+            <RowDefinition Height="120*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Name="gridImg">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="235*"/>
+                <ColumnDefinition Width="235*"/>
+                <ColumnDefinition Width="235*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="BtnLeft" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnLeft_Click"/>
+            <Button Name="BtnRight" Grid.Column="4" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnRight_Click"/>
+            <Image Name="Img1" Grid.Column="1" Margin="10,0" PreviewMouseDown="Img1_PreviewMouseDown"/>
+            <Image Name="Img2" Grid.Column="2" Margin="10,0" PreviewMouseDown="Img1_PreviewMouseDown"/>
+            <Image Name="Img3" Grid.Column="3" Margin="10,0" PreviewMouseDown="Img1_PreviewMouseDown"/>
+        </Grid>
+        <Button Name="BtnLoad" Content="Загрузить изображения" Grid.Row="2" Margin="150,25" Click="BtnLoad_Click"/>
+        <Image Name="largeImg" Margin="15" Grid.RowSpan="3" PreviewMouseDown="largeImg_PreviewMouseDown"/>
     </Grid>
 </Window>
